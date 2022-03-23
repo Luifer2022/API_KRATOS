@@ -12,10 +12,10 @@ class TestController extends Controller
     public function index(Request $request)
     {
 
-        $users = Agreement::all();
+        $agreement = Agreement::all();
         return response()->json([
             'res'   => true,
-            'data'  => $users
+            'data'  => $agreement
         ], 200);
     }
 }
