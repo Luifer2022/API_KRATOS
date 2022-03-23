@@ -1,8 +1,7 @@
 <?php
 
-use App\Http\Controllers\TestController;
+use App\Http\Controllers\AgreementController;
 use App\Http\Controllers\UserController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,4 +27,4 @@ Route::controller(UserController::class)->group(function () {
     Route::post('login', 'login');
 });
 
-Route::get('test', [TestController::class, 'index']);
+Route::get('test', [AgreementController::class, 'index']);
