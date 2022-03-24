@@ -28,3 +28,4 @@ Route::controller(UserController::class)->group(function () {
 });
 
 Route::get('test', [AgreementController::class, 'index']);
+Route::get('test-store', [AgreementController::class, 'storeLocal']);

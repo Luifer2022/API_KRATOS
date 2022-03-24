@@ -14,7 +14,7 @@ class UserController extends Controller
     public function index(Request $request)
     {
         $limit = $request["limit"] ?? 10;
-        $users = DB::table('users')->simplePaginate($limit);
+        $users = User::simplePaginate($limit);
         return response()->json([
             'res'   => true,
             'data'  => $users
