@@ -18,12 +18,12 @@ return new class extends Migration
             $table->integer('agreement_id');
             $table->integer('agreement_line_id');
             $table->integer('customer_id');
-            $table->integer('menber_id');
-            $table->double('amount',26,2);
+            $table->integer('member_id');
+            $table->double('amount',26,2); //total_ttc
             $table->integer('payment_method_id');
             $table->date('due_date');
-            $table->string('email',100);
-            $table->integer('phone');
+            $table->string('email',100)->nullable();
+            $table->integer('phone')->nullable();
             $table->foreignId('user_id')->constrained('users');
             $table->integer('user_update_id')->nullable();
             $table->softDeletes('delete_at',0);

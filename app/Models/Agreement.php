@@ -9,5 +9,15 @@ class Agreement extends Model
 {
     use HasFactory;
     protected $connection = 'mysql2';
-    protected $table = 'agreement_lines';
+    protected $table = 'agreement';
+
+    public function agreementLine()
+    {
+        return $this->hasMany(AgreementLine::class);
+    }
+
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class);
+    }
 }

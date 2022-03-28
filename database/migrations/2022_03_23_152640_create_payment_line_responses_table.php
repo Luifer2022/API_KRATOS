@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('last_name',75);
             $table->string('dni',45);
             $table->string('account_type',45);
-            $table->string('account_number',45);
+            $table->string('account_number',45); //hash
             $table->string('bank',45);
             $table->string('payment_linecol',45);
             $table->string('run',45);
